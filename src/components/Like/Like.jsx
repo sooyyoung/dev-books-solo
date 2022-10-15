@@ -1,5 +1,5 @@
-import "./like.css";
 import { useState } from "react";
+import { LikeBtnWrapper } from "./like.style";
 
 function Like({ heartCount, postid, hearted }) {
   const [like, setLike] = useState(hearted);
@@ -66,14 +66,14 @@ function Like({ heartCount, postid, hearted }) {
   }
 
   return (
-    <div className="likeBtnWrapper">
+    <LikeBtnWrapper>
       <button
         className={like ? "clicked" : "unclicked"}
         onClick={handleClikLike}
       >
         <span className="likeBtnNum">{likeNum || 0}</span>
       </button>
-    </div>
+    </LikeBtnWrapper>
   );
 }
 
