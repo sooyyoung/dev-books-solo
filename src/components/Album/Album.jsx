@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./album.css";
+import { PostWrapper } from "./album.style";
 
 function Album(props) {
   let navigate = useNavigate();
@@ -33,7 +33,7 @@ function Album(props) {
 
   return (
     <div className="album">
-      <div className="postWrapper">
+      <PostWrapper>
         {album.map((item, index) => {
           return (
             <img
@@ -50,7 +50,7 @@ function Album(props) {
             />
           );
         })}
-      </div>
+      </PostWrapper>
     </div>
   );
 }
