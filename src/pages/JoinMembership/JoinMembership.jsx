@@ -1,10 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./joinMembership.css";
 import Topbar from "../../components/Topbar/Topbar";
 import Button from "../../components/Buttons/Button";
 import { TextInput } from "../../components/TextInput/TextInput";
+import {
+  JoinMembershipMobileScreen,
+  ErrorMessage,
+} from "./joinMembership.style";
 
 function JoinMembership() {
   const [userEmail, setUserEmail] = useState("");
@@ -73,7 +76,7 @@ function JoinMembership() {
   };
 
   return (
-    <article className="JoinMembershipMobileScreen">
+    <JoinMembershipMobileScreen>
       <Topbar />
       <article className="loginEmail">
         <h1 id="loginTitle">이메일로 회원가입</h1>
@@ -91,7 +94,7 @@ function JoinMembership() {
             }}
             onBlur={handleCheckEmail}
           />
-          <span className="errorMessage">{emailError}</span>
+          <ErrorMessage>{emailError}</ErrorMessage>
         </div>
         <TextInput
           label="비밀번호"
@@ -106,7 +109,7 @@ function JoinMembership() {
           }}
           onBlur={handleCheckPw}
         />
-        <span className="errorMessage">{pwError}</span>
+        <ErrorMessage>{pwError}</ErrorMessage>
         <div className="loginButton" onClick={handleCheckEmail}>
           <Button
             className={
@@ -121,7 +124,7 @@ function JoinMembership() {
           </Button>
         </div>
       </article>
-    </article>
+    </JoinMembershipMobileScreen>
   );
 }
 
