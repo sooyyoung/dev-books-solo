@@ -1,9 +1,9 @@
-import { ChatNav } from "../../components/Navbar/Navbar";
-import userProfile from "../../assets/basic-profile-img.svg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ChatNav } from "../../components/Navbar/Navbar";
 import Modal from "../../components/Modal/Modal";
 import ModalContent from "../../components/ModalContent/ModalContent";
-import { useNavigate } from "react-router-dom";
+import userProfile from "../../assets/basic-profile-img.svg";
 import {
   ChatRoomWrap,
   ChatMain,

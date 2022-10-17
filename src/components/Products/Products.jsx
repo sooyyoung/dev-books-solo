@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./products.css";
 import { Link, useNavigate } from "react-router-dom";
 import Modal from "../Modal/Modal";
 import ModalContent from "../ModalContent/ModalContent";
 import Alert from "../Alert/Alert";
+import "./products.css";
 
 function Product(props) {
   const { value, text, price, image, link, onClick } = props;

@@ -1,9 +1,8 @@
-import React from "react";
-import "./loginEmail.css";
-import Button from "../../components/Buttons/Button";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "../../components/Buttons/Button";
 import { TextInput } from "../../components/TextInput/TextInput";
-import { useState } from "react";
+import "./loginEmail.css";
 
 function LoginEmail() {
   let navigate = useNavigate();

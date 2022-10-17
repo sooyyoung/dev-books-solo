@@ -1,7 +1,6 @@
 import React from "react";
-import Button from "../Buttons/Button";
 import { useNavigate } from "react-router-dom";
-
+import Button from "../Buttons/Button";
 import {
   Nav,
   ArrowBtn,

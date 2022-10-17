@@ -1,13 +1,12 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Button from '../../components/Buttons/Button';
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Button from "../../components/Buttons/Button";
 import {
   NotFoundFeed,
   NotFoundMain,
   NotFoundLogo,
   NotFoundDescription,
-} from './notFound.style';
+} from "./notFound.style";
 
 const NotFound = () => {
   const navigate = useNavigate();
@@ -23,7 +22,7 @@ const NotFound = () => {
             navigate(-1);
           }}
         >
-          <Button className={'lg button'} children={'이전 페이지'} />
+          <Button className={"lg button"} children={"이전 페이지"} />
         </div>
       </NotFoundMain>
     </NotFoundFeed>

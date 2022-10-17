@@ -1,9 +1,9 @@
+import { useState, useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { BasicNav } from "../../components/Navbar/Navbar";
 import Comment from "../../components/Comment/Comment";
 import { Content } from "../../components/Content/Content";
 import PostComment from "../../components/PostComment/PostComment";
-import { useState, useEffect, useRef } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
 import Modal from "../../components/Modal/Modal";
 import ModalContent from "../../components/ModalContent/ModalContent";
 import Alert from "../../components/Alert/Alert";

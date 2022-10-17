@@ -1,6 +1,5 @@
 import React from "react";
 import deleteButton from "../../assets/icon/icon-delete.svg";
-
 import styled from "styled-components";
 
 const PostList = styled.div`

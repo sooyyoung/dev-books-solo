@@ -1,8 +1,7 @@
-// import "./postUpload.css";
-import { UploadNav } from "../../components/Navbar/Navbar";
-import { useEffect, useState } from "react";
-import ImgPreview from "../../components/ImgPreview/ImgPreveiw";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { UploadNav } from "../../components/Navbar/Navbar";
+import ImgPreview from "../../components/ImgPreview/ImgPreveiw";
 import {
   PostUploadWrap,
   PostUploadContent,

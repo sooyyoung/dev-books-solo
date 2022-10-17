@@ -1,10 +1,9 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { MainNav } from '../../components/Navbar/Navbar';
-import Button from '../../components/Buttons/Button';
-import { Content } from '../../components/Content/Content';
-import TabMenu from '../../components/TabMenu/TabMenu';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { MainNav } from "../../components/Navbar/Navbar";
+import Button from "../../components/Buttons/Button";
+import { Content } from "../../components/Content/Content";
+import TabMenu from "../../components/TabMenu/TabMenu";
 import {
   HomeFeedSection,
   HomeTabmenu,
@@ -12,7 +11,7 @@ import {
   HomeFeedMain,
   HomeFeedLogo,
   HomeFeedDescription,
-} from './homeFeed.style';
+} from "./homeFeed.style";
 
 const HomeFeed = () => {
   // 팔로워 게시글 목록 개수 상태
@@ -20,16 +19,16 @@ const HomeFeed = () => {
 
   // 팔로워 게시글 목록 불러오기
   const getFollowerPost = async () => {
-    const url = 'https://mandarin.api.weniv.co.kr';
-    const getPostPath = '/post/feed';
-    const token = localStorage.getItem('token');
+    const url = "https://mandarin.api.weniv.co.kr";
+    const getPostPath = "/post/feed";
+    const token = localStorage.getItem("token");
 
     try {
       const res = await fetch(url + getPostPath, {
-        method: 'GET',
+        method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
-          'Content-type': 'application/json',
+          "Content-type": "application/json",
         },
       });
 
@@ -48,7 +47,7 @@ const HomeFeed = () => {
       <HomeTabmenu>
         <TabMenu />
       </HomeTabmenu>
-      <MainNav title={'데브북스 피드'} />
+      <MainNav title={"데브북스 피드"} />
       <HomeFeedDataMain>
         {followerPost.map((file, index) => {
           return (
@@ -59,7 +58,7 @@ const HomeFeed = () => {
               userName={file.author.username}
               userId={file.author.accountname}
               posttext={file.content}
-              postImg={file.image ? file.image.split(',') : []}
+              postImg={file.image ? file.image.split(",") : []}
               heartCount={file.heartCount}
               hearted={file.hearted}
               value={file.id}
@@ -75,7 +74,7 @@ const HomeFeed = () => {
       <HomeTabmenu>
         <TabMenu />
       </HomeTabmenu>
-      <MainNav title={'데브북스 피드'} />
+      <MainNav title={"데브북스 피드"} />
       <HomeFeedMain>
         <HomeFeedLogo />
         <HomeFeedDescription>
@@ -83,10 +82,10 @@ const HomeFeed = () => {
         </HomeFeedDescription>
         <div
           onClick={() => {
-            navigate('/SearchFeed');
+            navigate("/SearchFeed");
           }}
         >
-          <Button className={'lg button'} children={'검색하기'} />
+          <Button className={"lg button"} children={"검색하기"} />
         </div>
       </HomeFeedMain>
     </HomeFeedSection>

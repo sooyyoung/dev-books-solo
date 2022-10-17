@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Modal from "../Modal/Modal";
 import ModalContent from "../ModalContent/ModalContent";
 import Alert from "../Alert/Alert";
-import { useNavigate } from "react-router-dom";
 import Like from "../Like/Like";
 import {
   PostContent,

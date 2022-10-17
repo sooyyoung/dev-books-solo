@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./login.css";
-import logoImage from "../../assets/logo.svg";
-import logoNameKorean from "../../assets/logoNameKorean.svg";
 import { useNavigate } from "react-router-dom";
 import Splash from "../Splash/Splash";
+import logoImage from "../../assets/logo.svg";
+import logoNameKorean from "../../assets/logoNameKorean.svg";
+import "./login.css";
 
 function LoginPage() {
   const [loading, setLoading] = useState(false);

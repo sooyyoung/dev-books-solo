@@ -1,7 +1,7 @@
-import { UploadNav } from "../../components/Navbar/Navbar";
-import { useEffect, useState } from "react";
-import ImgPreview from "../../components/ImgPreview/ImgPreveiw";
+import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { UploadNav } from "../../components/Navbar/Navbar";
+import ImgPreview from "../../components/ImgPreview/ImgPreveiw";
 import {
   PostUploadWrap,
   PostUploadContent,

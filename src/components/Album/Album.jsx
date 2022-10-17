@@ -32,26 +32,24 @@ function Album(props) {
   }, []);
 
   return (
-    <div className="album">
-      <PostWrapper>
-        {album.map((item, index) => {
-          return (
-            <img
-              key={index}
-              src={item.image.split(",")[0]}
-              alt=""
-              onClick={() => {
-                navigate("/singlePost", {
-                  state: {
-                    postId: item.id,
-                  },
-                });
-              }}
-            />
-          );
-        })}
-      </PostWrapper>
-    </div>
+    <PostWrapper>
+      {album.map((item, index) => {
+        return (
+          <img
+            key={index}
+            src={item.image.split(",")[0]}
+            alt=""
+            onClick={() => {
+              navigate("/singlePost", {
+                state: {
+                  postId: item.id,
+                },
+              });
+            }}
+          />
+        );
+      })}
+    </PostWrapper>
   );
 }
 
