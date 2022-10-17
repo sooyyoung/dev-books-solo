@@ -2,7 +2,6 @@ import { BasicNav } from "../../components/Navbar/Navbar";
 import Comment from "../../components/Comment/Comment";
 import { Content } from "../../components/Content/Content";
 import PostComment from "../../components/PostComment/PostComment";
-import Topbar from "../../components/Topbar/Topbar";
 import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Modal from "../../components/Modal/Modal";
@@ -233,7 +232,6 @@ export default function SinglePost() {
 
   return (
     <SinglePostWrap>
-      <Topbar />
       <BasicNav
         onClick={() => {
           setNavModal(true);

@@ -4,9 +4,7 @@ import { useState, useEffect } from 'react';
 import { MainNav } from '../../components/Navbar/Navbar';
 import Button from '../../components/Buttons/Button';
 import { Content } from '../../components/Content/Content';
-import Topbar from '../../components/Topbar/Topbar';
 import TabMenu from '../../components/TabMenu/TabMenu';
-
 import {
   HomeFeedSection,
   HomeTabmenu,
@@ -47,7 +45,6 @@ const HomeFeed = () => {
 
   return followerPost.length > 0 ? (
     <HomeFeedSection isvalid={followerPost.length}>
-      <Topbar />
       <HomeTabmenu>
         <TabMenu />
       </HomeTabmenu>
@@ -78,7 +75,6 @@ const HomeFeed = () => {
       <HomeTabmenu>
         <TabMenu />
       </HomeTabmenu>
-      <Topbar />
       <MainNav title={'데브북스 피드'} />
       <HomeFeedMain>
         <HomeFeedLogo />

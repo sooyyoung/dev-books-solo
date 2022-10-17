@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Topbar from "../../components/Topbar/Topbar";
 import TabMenu from "../../components/TabMenu/TabMenu";
 import { CommonNav } from "../../components/Navbar/Navbar";
 import { UserFollow } from "../../components/User/User";
@@ -42,7 +41,6 @@ export const Followers = () => {
 
   return (
     <Follow>
-      <Topbar />
       <CommonNav title="Followers" />
       <FollowUser>
         {followers.map((item, index) => {

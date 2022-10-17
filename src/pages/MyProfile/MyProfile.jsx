@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Topbar from "../../components/Topbar/Topbar";
 import { BasicNav } from "../../components/Navbar/Navbar";
 import ProfileInfo from "../../components/ProfileInfo/ProfileInfo";
 import Products from "../../components/Products/Products";
@@ -129,7 +128,6 @@ function MyProfile() {
 
   return (
     <ProfileMobileScreen>
-      <Topbar />
       <Tabmenu>
         <TabMenu />
       </Tabmenu>

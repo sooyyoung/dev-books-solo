@@ -3,7 +3,6 @@ import "./loginEmail.css";
 import Button from "../../components/Buttons/Button";
 import { useNavigate } from "react-router-dom";
 import { TextInput } from "../../components/TextInput/TextInput";
-import Topbar from "../../components/Topbar/Topbar";
 import { useState } from "react";
 
 function LoginEmail() {
@@ -65,7 +64,6 @@ function LoginEmail() {
 
   return (
     <article className="loginEmailMobileScreen">
-      <Topbar />
       <article className="loginEmail">
         <h1 id="loginTitle">로그인</h1>
         <form>

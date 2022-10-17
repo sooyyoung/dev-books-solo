@@ -2,8 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SearchNav } from '../../components/Navbar/Navbar';
 import { UserSearch } from '../../components/User/User';
-import Topbar from '../../components/Topbar/Topbar';
-
 import {
   SearchFeedSection,
   SearchFeedMain,
@@ -20,7 +18,6 @@ const SearchFeed = () => {
   };
   return (
     <SearchFeedSection>
-      <Topbar />
       <SearchNav />
       <SearchFeedMain>
         <SearchList>

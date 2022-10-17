@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { TextInput } from "../../components/TextInput/TextInput";
 import ProfileImgUpload from "../../components/ProfileImgUpload/ProfileImgUpload";
-import Topbar from "../../components/Topbar/Topbar";
 import Button from "../../components/Buttons/Button";
 import {
   JoinProfileWrap,
@@ -144,7 +143,6 @@ export const JoinProfile = () => {
 
   return (
     <JoinProfileWrap>
-      <Topbar />
       <JoinProfileTitle>프로필 설정</JoinProfileTitle>
       <JoinProfileText>나중에 언제든지 변경할 수 있습니다.</JoinProfileText>
       <ProfileImgUpload src={userImg} onChange={handleGetImg} />

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BasicNav } from '../../components/Navbar/Navbar';
 import { UserChatList } from '../../components/User/User';
-import Topbar from '../../components/Topbar/Topbar';
 import TabMenu from '../../components/TabMenu/TabMenu';
 import Modal from '../../components/Modal/Modal';
 import ModalContent from '../../components/ModalContent/ModalContent';
@@ -38,7 +37,6 @@ const ChatFeed = () => {
 
   return (
     <ChatFeedSection>
-      <Topbar />
       <BasicNav
         onClick={() => {
           setNavModal(true);

@@ -1,4 +1,3 @@
-import Topbar from "../../components/Topbar/Topbar";
 import { ChatNav } from "../../components/Navbar/Navbar";
 import userProfile from "../../assets/basic-profile-img.svg";
 import { useState } from "react";
@@ -34,7 +33,6 @@ export default function ChatRoom() {
 
   return (
     <ChatRoomWrap>
-      <Topbar />
       <ChatNav
         title="애월읍 위니브 감귤농장"
         onClickBtn={() => {

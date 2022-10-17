@@ -1,6 +1,5 @@
 // import "./postUpload.css";
 import { UploadNav } from "../../components/Navbar/Navbar";
-import Topbar from "../../components/Topbar/Topbar";
 import { useEffect, useState } from "react";
 import ImgPreview from "../../components/ImgPreview/ImgPreveiw";
 import { useNavigate } from "react-router-dom";
@@ -169,7 +168,6 @@ export default function PostUpload() {
   };
   return (
     <PostUploadWrap>
-      <Topbar />
       <UploadNav
         title="업로드"
         onClick={createPost}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Topbar from '../../components/Topbar/Topbar';
 import Button from '../../components/Buttons/Button';
 
 import {
@@ -14,7 +13,6 @@ const NotFound = () => {
   const navigate = useNavigate();
   return (
     <NotFoundFeed>
-      <Topbar />
       <NotFoundMain>
         <NotFoundLogo />
         <NotFoundDescription>

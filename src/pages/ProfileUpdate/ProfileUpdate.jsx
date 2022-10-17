@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { UploadNav } from "../../components/Navbar/Navbar";
 import { TextInput } from "../../components/TextInput/TextInput";
 import ProfileImgUpload from "../../components/ProfileImgUpload/ProfileImgUpload";
-import Topbar from "../../components/Topbar/Topbar";
 import {
   ProfileUpdateContainer,
   TextInputWrap,
@@ -165,7 +164,6 @@ export const ProfileUpdate = () => {
 
   return (
     <ProfileUpdateContainer>
-      <Topbar />
       <UploadNav
         title="저장"
         onClick={profileSave}

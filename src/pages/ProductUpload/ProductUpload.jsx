@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UploadNav } from "../../components/Navbar/Navbar";
 import { TextInput } from "../../components/TextInput/TextInput";
-import Topbar from "../../components/Topbar/Topbar";
 import {
   ProductUploadWrap,
   ProductImgUploadWrap,
@@ -151,7 +150,6 @@ const ProductUpload = () => {
 
   return (
     <ProductUploadWrap>
-      <Topbar />
       <UploadNav
         title="업로드"
         onClick={upload}

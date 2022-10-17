@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { TextInput } from "../../components/TextInput/TextInput";
-import Topbar from "../../components/Topbar/Topbar";
 import Button from "../../components/Buttons/Button";
 import { ArrowButton } from "../../components/Navbar/Navbar";
 import {
@@ -160,7 +159,6 @@ const ProductUpload = () => {
 
   return (
     <ProductUploadWrap>
-      <Topbar />
       <UploadNavbar>
         <ArrowButton />
         <div className="uploadButton">

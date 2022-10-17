@@ -3,7 +3,6 @@ import "./login.css";
 import logoImage from "../../assets/logo.svg";
 import logoNameKorean from "../../assets/logoNameKorean.svg";
 import { useNavigate } from "react-router-dom";
-import Topbar from "../../components/Topbar/Topbar";
 import Splash from "../Splash/Splash";
 
 function LoginPage() {
@@ -25,7 +24,6 @@ function LoginPage() {
       ) : (
         //로딩 후 로그인 페이지
         <article className="loginMobileScreen">
-          <Topbar />
           <div className="loginLogo">
             <img className="loginLogoImage2" src={logoImage} alt="데브북스" />
             <img src={logoNameKorean} className="logoKo" alt="데브북스" />

@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Topbar from "../../components/Topbar/Topbar";
 import Button from "../../components/Buttons/Button";
 import { TextInput } from "../../components/TextInput/TextInput";
 import {
@@ -77,7 +76,6 @@ function JoinMembership() {
 
   return (
     <JoinMembershipMobileScreen>
-      <Topbar />
       <article className="loginEmail">
         <h1 id="loginTitle">이메일로 회원가입</h1>
         <div className="emailAccount">
