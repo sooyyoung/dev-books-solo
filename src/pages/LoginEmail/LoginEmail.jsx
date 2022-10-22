@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Buttons/Button";
 import { TextInput } from "../../components/TextInput/TextInput";
-import "./loginEmail.css";
+import {
+  LoginEmailMobileScreen,
+  LoginTitle,
+  LoginButton,
+  LooginEmailText,
+} from "./loginEmail.style";
 
 function LoginEmail() {
   let navigate = useNavigate();
-
   const [userEmail, setUserEmail] = useState("");
   const [userPw, setUserPw] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -62,59 +66,56 @@ function LoginEmail() {
   };
 
   return (
-    <article className="loginEmailMobileScreen">
-      <article className="loginEmail">
-        <h1 id="loginTitle">로그인</h1>
-        <form>
-          <div className="emailAccount">
-            <TextInput
-              type="email"
-              label="이메일"
-              for="email"
-              id="email"
-              value={userEmail}
-              onChange={(e) => {
-                setUserEmail(e.target.value);
-                setEmailError("");
-              }}
-            />
-            <span className="errorMessage">{emailError}</span>
-          </div>
+    <LoginEmailMobileScreen>
+      <LoginTitle>로그인</LoginTitle>
+      <form>
+        <div className="emailAccount">
           <TextInput
-            type="password"
-            label="비밀번호"
-            for="password"
-            id="password"
-            value={userPw}
+            type="email"
+            label="이메일"
+            for="email"
+            id="email"
+            value={userEmail}
             onChange={(e) => {
-              setUserPw(e.target.value);
-              setPwError("");
+              setUserEmail(e.target.value);
+              setEmailError("");
             }}
           />
-          <span className="errorMessage">{pwError}</span>
-          <div className="loginButton" onClick={login}>
-            <Button
-              className={
-                !emailError && !pwError && userEmail !== "" && userPw !== ""
-                  ? "button lg"
-                  : "button lg disabled"
-              }
-              type="submit"
-            >
-              로그인
-            </Button>
-          </div>
-        </form>
-        <p
-          className="loginEmailText"
-          onClick={() => {
-            navigate("/joinMembership");
+          <span className="errorMessage">{emailError}</span>
+        </div>
+        <TextInput
+          type="password"
+          label="비밀번호"
+          for="password"
+          id="password"
+          value={userPw}
+          onChange={(e) => {
+            setUserPw(e.target.value);
+            setPwError("");
           }}
-        >
-          이메일로 회원가입
-        </p>
-      </article>
-    </article>
+        />
+        <span className="errorMessage">{pwError}</span>
+        <LoginButton onClick={login}>
+          <Button
+            className={
+              !emailError && !pwError && userEmail !== "" && userPw !== ""
+                ? "button lg"
+                : "button lg disabled"
+            }
+            type="submit"
+          >
+            로그인
+          </Button>
+        </LoginButton>
+      </form>
+      <LooginEmailText
+        onClick={() => {
+          navigate("/joinMembership");
+        }}
+      >
+        이메일로 회원가입
+      </LooginEmailText>
+    </LoginEmailMobileScreen>
   );
 }
 
