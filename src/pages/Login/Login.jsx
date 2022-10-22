@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Splash from "../Splash/Splash";
 import logoImage from "../../assets/logo.svg";
 import logoNameKorean from "../../assets/logoNameKorean.svg";
-import "./login.css";
+import { LoginMobileScreen, LoginLogo, LoginLink } from "./login.style";
 
 function LoginPage() {
   const [loading, setLoading] = useState(false);
@@ -23,12 +23,12 @@ function LoginPage() {
         <Splash />
       ) : (
         //로딩 후 로그인 페이지
-        <article className="loginMobileScreen">
-          <div className="loginLogo">
+        <LoginMobileScreen>
+          <LoginLogo>
             <img className="loginLogoImage2" src={logoImage} alt="데브북스" />
             <img src={logoNameKorean} className="logoKo" alt="데브북스" />
-          </div>
-          <article className="loginLink">
+          </LoginLogo>
+          <LoginLink>
             <div className="loginKakao">카카오톡 계정으로 로그인</div>
             <div className="loginGoogle">구글 계정으로 로그인</div>
             <div className="loginFacebook">페이스북 계정으로 로그인</div>
@@ -40,7 +40,7 @@ function LoginPage() {
               >
                 이메일로 로그인
               </p>
-              <div id="divisionLine"></div>
+              <div className="divisionLine"></div>
               <p
                 onClick={() => {
                   navigate("/joinMembership");
@@ -49,8 +49,8 @@ function LoginPage() {
                 회원가입
               </p>
             </div>
-          </article>
-        </article>
+          </LoginLink>
+        </LoginMobileScreen>
       )}
     </>
   );
