@@ -32,7 +32,7 @@ export const LoginLogo = styled.div`
 
 export const LoginLink = styled.article`
   position: relative;
-  top: 270px;
+  top: 300px;
   width: 390px;
   height: 319px;
   overflow: hidden;
