@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const TextInputContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   width: 322px;
   background-color: white;
 `;
