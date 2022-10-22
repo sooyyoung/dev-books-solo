@@ -4,6 +4,8 @@ import Button from "../../components/Buttons/Button";
 import { TextInput } from "../../components/TextInput/TextInput";
 import {
   JoinMembershipMobileScreen,
+  JoinTitle,
+  JoinButton,
   ErrorMessage,
 } from "./joinMembership.style";
 
@@ -76,7 +78,7 @@ function JoinMembership() {
   return (
     <JoinMembershipMobileScreen>
       <article className="loginEmail">
-        <h1 id="loginTitle">이메일로 회원가입</h1>
+        <JoinTitle>이메일로 회원가입</JoinTitle>
         <div className="emailAccount">
           <TextInput
             label="이메일"
@@ -107,7 +109,7 @@ function JoinMembership() {
           onBlur={handleCheckPw}
         />
         <ErrorMessage>{pwError}</ErrorMessage>
-        <div className="loginButton" onClick={handleCheckEmail}>
+        <JoinButton onClick={handleCheckEmail}>
           <Button
             className={
               !emailError && !pwError && userEmail !== "" && userPw !== ""
@@ -119,7 +121,7 @@ function JoinMembership() {
           >
             다음
           </Button>
-        </div>
+        </JoinButton>
       </article>
     </JoinMembershipMobileScreen>
   );
