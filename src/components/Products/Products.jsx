@@ -3,14 +3,19 @@ import { Link, useNavigate } from "react-router-dom";
 import Modal from "../Modal/Modal";
 import ModalContent from "../ModalContent/ModalContent";
 import Alert from "../Alert/Alert";
-import "./products.css";
+import {
+  ProductsWrap,
+  ProductsTitle,
+  ProductsItem,
+  ProductText,
+  ProductPrice,
+  ProductImg,
+} from "./products.style";
 
 function Product(props) {
   const { value, text, price, image, link, onClick } = props;
-
   const [prodModal, setProdModal] = useState(false);
   const [prodAlert, setProdAlert] = useState(false);
-
   let navigate = useNavigate();
 
   const prodUpdate = () => {
@@ -31,15 +36,10 @@ function Product(props) {
 
   return (
     <>
-      {/* // !!링크 추후 변경!! */}
-      <Link
-        to="/myProfile"
-        className="product"
-        onClick={() => setProdModal(true)}
-      >
-        <img src={image} alt="" />
-        <p className="productText">{text}</p>
-        <p className="productPrice">{price} 원</p>
+      <Link to="/myProfile" onClick={() => setProdModal(true)}>
+        <ProductImg src={image} alt="" />
+        <ProductText>{text}</ProductText>
+        <ProductPrice>{price} 원</ProductPrice>
       </Link>
       <div
         className={prodModal ? "prodModal" : "disabledProdPopup"}
@@ -105,9 +105,9 @@ function Products(props) {
   }, []);
 
   return (
-    <div className={props.className}>
-      <h2 id="productsTitle">판매 중인 상품</h2>
-      <div className="productsWrapper">
+    <ProductsWrap className={props.className}>
+      <ProductsTitle>판매 중인 상품</ProductsTitle>
+      <ProductsItem>
         {products.map(function (item, index) {
           return (
             <Product
@@ -121,8 +121,8 @@ function Products(props) {
             />
           );
         })}
-      </div>
-    </div>
+      </ProductsItem>
+    </ProductsWrap>
   );
 }
 
