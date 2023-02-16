@@ -30,7 +30,7 @@ function JoinMembership() {
   // 비밀번호 유효성 체크
   const handleCheckPw = () => {
     if (userPw === "") {
-      setPwError("비밀번호를 입력해주세요");
+      setPwError("비밀번호를 입력해주세요.");
     } else if (userPw.length <= 5 && userPw !== "") {
       setPwError("비밀번호는 6자 이상이어야 합니다.");
     } else {

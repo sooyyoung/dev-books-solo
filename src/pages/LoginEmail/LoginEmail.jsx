@@ -7,6 +7,7 @@ import {
   LoginTitle,
   LoginButton,
   LooginEmailText,
+  ErrorMessage,
 } from "./loginEmail.style";
 
 function LoginEmail() {
@@ -81,7 +82,7 @@ function LoginEmail() {
               setEmailError("");
             }}
           />
-          <span className="errorMessage">{emailError}</span>
+          <ErrorMessage>{emailError}</ErrorMessage>
         </div>
         <TextInput
           type="password"
@@ -94,7 +95,7 @@ function LoginEmail() {
             setPwError("");
           }}
         />
-        <span className="errorMessage">{pwError}</span>
+        <ErrorMessage>{pwError}</ErrorMessage>
         <LoginButton onClick={login}>
           <Button
             className={

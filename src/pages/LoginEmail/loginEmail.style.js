@@ -32,3 +32,13 @@ export const LooginEmailText = styled.p`
   text-align: center;
   cursor: pointer;
 `;
+
+export const ErrorMessage = styled.span`
+  width: 322px;
+  margin: 0 auto;
+  padding-top: 3px;
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #eb5757;
+`;

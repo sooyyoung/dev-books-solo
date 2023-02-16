@@ -27,6 +27,10 @@ export const JoinButton = styled.div`
 `;
 
 export const ErrorMessage = styled.span`
+  width: 322px;
+  margin: 0 auto;
+  padding-top: 3px;
+  display: block;
   font-size: 12px;
   font-weight: 400;
   color: #eb5757;
