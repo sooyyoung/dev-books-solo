@@ -1,14 +1,14 @@
-import "./button.css";
+import { Btn } from "./button.style";
 
 function Button(props) {
   return (
-    <button
+    <Btn
       className={props.className}
       type={props.type}
       onClick={props.onClick}
     >
       {props.children}
-    </button>
+    </Btn>
   );
 }
 
