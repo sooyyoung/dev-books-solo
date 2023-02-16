@@ -18,6 +18,7 @@ export const InputText = styled.input`
   font-size: 14px;
   border-bottom: 1px solid #dbdbdb;
   padding-bottom: 8px;
+  background-color: #ffffff;
   ::placeholder {
     color: #dbdbdb;
     font-size: 14px;
@@ -27,11 +28,9 @@ export const InputText = styled.input`
   &:focus {
     outline: none;
     border-bottom: 1px solid #3e7c17;
-    background-color: #ffffff;
   }
   &:active {
     outline: none;
     border-bottom: 1px solid #3e7c17;
-    background-color: #ffffff;
   }
 `;
