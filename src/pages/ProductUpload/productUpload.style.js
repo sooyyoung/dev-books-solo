@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProductUploadWrap = styled.div`
   width: 390px;
-  height: 844px;
+  height: 100vh;
   margin: 0 auto;
   background-color: #fff;
 `;

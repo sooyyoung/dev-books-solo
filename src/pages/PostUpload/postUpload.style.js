@@ -3,7 +3,7 @@ import uploadFileImg from "../../assets/upload-file.svg";
 
 export const PostUploadWrap = styled.div`
   width: 390px;
-  height: 844px;
+  height: 100vh;
   margin: 0 auto;
   background-color: #fff;
   position: relative;

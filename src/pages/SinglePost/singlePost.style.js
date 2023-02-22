@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SinglePostWrap = styled.div`
   width: 390px;
-  height: 844px;
+  height: 100vh;
   margin: 0 auto;
   background-color: #fff;
   position: relative;
@@ -27,7 +27,7 @@ export const CommentModal = styled.div`
       return `position: absolute;
         top: 0;
         width: 390px;
-        height: 844px;`;
+        height: 100vh;`;
     } else {
       return `display: none`;
     }

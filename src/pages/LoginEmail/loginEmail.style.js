@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const LoginEmailMobileScreen = styled.article`
   position: relative;
   width: 390px;
-  height: 844px;
+  height: 100vh;
   background-color: #fff;
   margin: 0 auto;
   font-family: "Noto Sans KR", sans-serif;

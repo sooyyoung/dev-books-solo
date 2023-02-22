@@ -4,7 +4,7 @@ import imgBtn from "../../assets/img-button.svg";
 
 export const ChatRoomWrap = styled.div`
   width: 390px;
-  height: 844px;
+  height: 100vh;
   margin: 0 auto;
   background-color: #fff;
   position: relative;
@@ -12,9 +12,9 @@ export const ChatRoomWrap = styled.div`
 `;
 
 export const ChatMain = styled.section`
-  height: 711px;
+  height: 86vh;
   background-color: #f8f8f8;
-  padding: 215px 16px 11px 16px;
+  padding: 11px 16px;
 `;
 
 export const ChatList = styled.li`

@@ -9,7 +9,7 @@ import postAlbumOn from "../../assets/icon/icon-post-album-on.svg";
 export const ProfileMobileScreen = styled.div`
   position: relative;
   width: 390px;
-  height: 844px;
+  height: 100vh;
   background-color: #fff;
   margin: 0 auto;
   overflow: auto;
@@ -21,7 +21,7 @@ export const ProfileMobileScreen = styled.div`
 `;
 
 export const ProfileMain = styled.main`
-  height: 712px;
+  height: 86vh;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;

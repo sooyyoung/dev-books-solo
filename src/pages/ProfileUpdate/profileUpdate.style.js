@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProfileUpdateContainer = styled.section`
   width: 390px;
-  height: 844px;
+  height: 100vh;
   margin: 0 auto;
   background-color: #fff;
 `;

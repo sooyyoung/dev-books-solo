@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const SearchFeedSection = styled.section`
   width: 390px;
-  height: 844px;
+  height: 100vh;
   margin: 0 auto;
   background-color: #ffffff;
 `;
 
 export const SearchFeedMain = styled.main`
-  height: 712px;
+  height: auto;
 `;
 
 export const SearchList = styled.ul`

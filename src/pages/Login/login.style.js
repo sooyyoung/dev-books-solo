@@ -12,7 +12,7 @@ export const LoginMobileScreen = styled.article`
 
   position: relative;
   width: 390px;
-  height: 844px;
+  height: 100vh;
   background-color: #ffd66b;
   margin: 0 auto;
   overflow: hidden;
@@ -31,10 +31,10 @@ export const LoginLogo = styled.div`
 `;
 
 export const LoginLink = styled.article`
-  position: relative;
-  top: 300px;
+  position: absolute;
+  bottom: 0;
   width: 390px;
-  height: 319px;
+  height: 300px;
   overflow: hidden;
   border-radius: 20px 20px 0 0;
   background-color: #fff;

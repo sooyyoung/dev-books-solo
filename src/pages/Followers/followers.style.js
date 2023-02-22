@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Follow = styled.div`
   width: 390px;
-  height: 844px;
+  height: 100vh;
   margin: 0 auto;
   background-color: #fff;
   position: relative;

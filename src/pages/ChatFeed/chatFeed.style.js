@@ -4,7 +4,7 @@ import AlertHighlight from '../../assets/Ellipse6.svg';
 
 export const ChatFeedSection = styled.section`
   width: 390px;
-  height: 844px;
+  height: 100vh;
   margin: 0 auto;
   background-color: #ffffff;
   position: relative;
@@ -12,7 +12,6 @@ export const ChatFeedSection = styled.section`
 
 export const ChatFeedMain = styled.main`
   box-sizing: border-box;
-  height: 772px;
 `;
 
 export const ChatFeedList = styled.ul`

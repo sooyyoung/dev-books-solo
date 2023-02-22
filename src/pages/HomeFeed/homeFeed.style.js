@@ -4,7 +4,7 @@ import symbolLogo from '../../assets/logo.svg';
 
 export const HomeFeedSection = styled.section`
   width: 390px;
-  height: 844px;
+  height: 100vh;
   margin: 0 auto;
   text-align: ${(props) => (props.isvalid > 0 ? 'initial' : 'center')};
   background-color: #ffffff;
@@ -18,7 +18,7 @@ export const HomeTabmenu = styled.div`
 `;
 
 export const HomeFeedDataMain = styled.main`
-  height: 712px;
+  height: 86vh;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;
