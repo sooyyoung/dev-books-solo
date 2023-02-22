@@ -75,6 +75,6 @@ export const PostImgLists = styled.div`
   display: flex;
   height: 171px;
   margin: 0 16px 0 70px;
-  overflow-x: scroll;
+  overflow-x: auto;
   gap: 8px;
 `;

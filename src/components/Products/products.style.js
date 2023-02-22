@@ -4,7 +4,7 @@ export const ProductsWrap = styled.div`
   width: 390px;
   height: 208px;
   padding: 0 16px 0 16px;
-  overflow: scroll;
+  overflow: auto;
   .disabledProdPopup {
     display: none;
   }
