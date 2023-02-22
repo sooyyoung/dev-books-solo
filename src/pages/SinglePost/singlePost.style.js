@@ -10,7 +10,7 @@ export const SinglePostWrap = styled.div`
 
 export const SinglePostMain = styled.section`
   height: 711px;
-  overflow-y: scroll;
+  overflow-y: auto;
 `;
 
 export const SinglePostContainer = styled.section`

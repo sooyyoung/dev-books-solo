@@ -6,6 +6,8 @@ export const CommentForm = styled.form`
   padding: 13px 16px;
   box-sizing: border-box;
   border-top: 0.5px solid #dbdbdb;
+  position: absolute;
+  bottom: 0;
 `;
 
 export const ProfileImg = styled.img.attrs({
