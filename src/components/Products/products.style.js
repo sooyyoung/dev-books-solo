@@ -8,7 +8,7 @@ export const ProductsWrap = styled.div`
   .disabledProdPopup {
     display: none;
   }
-  .hidden {
+  &.hidden {
     display: none;
   }
 `;
