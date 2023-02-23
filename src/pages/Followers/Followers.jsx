@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import TabMenu from "../../components/TabMenu/TabMenu";
 import { CommonNav } from "../../components/Navbar/Navbar";
 import { UserFollow } from "../../components/User/User";
-import { Follow, FollowUser, Tabmenu } from "./followers.style";
+import { Follow, FollowWrap, FollowUser, Tabmenu } from "./followers.style";
 
 export const Followers = () => {
   const location = useLocation();
@@ -17,6 +17,7 @@ export const Followers = () => {
   const followerList = async () => {
     const url = "https://mandarin.api.weniv.co.kr";
     const accountName = location.search.split("=")[1];
+    const followerCount = location.state;
     const token = localStorage.getItem("token");
 
     const init = {
@@ -29,7 +30,7 @@ export const Followers = () => {
 
     try {
       const resUserFollower = await fetch(
-        `${url}/profile/${accountName}/follower`,
+        `${url}/profile/${accountName}/follower?limit=${followerCount}`,
         init
       );
       const resUserFollowerJson = await resUserFollower.json();
@@ -42,19 +43,21 @@ export const Followers = () => {
   return (
     <Follow>
       <CommonNav title="Followers" />
-      <FollowUser>
-        {followers.map((item, index) => {
-          return (
-            <UserFollow
-              key={index}
-              picture={item.image}
-              name={item.username}
-              id={item.accountname}
-              button={item.isfollow}
-            />
-          );
-        })}
-      </FollowUser>
+      <FollowWrap>
+        <FollowUser>
+            {followers.map((item, index) => {
+            return (
+                <UserFollow
+                key={index}
+                picture={item.image}
+                name={item.username}
+                id={item.accountname}
+                button={item.isfollow}
+                />
+            );
+            })}
+        </FollowUser>
+      </FollowWrap>
       <Tabmenu>
         <TabMenu />
       </Tabmenu>

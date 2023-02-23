@@ -33,9 +33,7 @@ function ProfileInfo(props) {
 
   useEffect(() => {
     profile();
-    followingCount();
-    followerCount();
-  }, []);
+  }, [props.isFollow]);
 
   // 프로필
   const profile = async () => {
@@ -48,32 +46,8 @@ function ProfileInfo(props) {
       setAccountname(json.profile.accountname);
       setIntro(json.profile.intro);
       setUserImg(json.profile.image);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  // 팔로잉
-  const followingCount = async () => {
-    const followingPath = `/profile/${accountName}/following`;
-
-    try {
-      const res = await fetch(url + followingPath, init);
-      const json = await res.json();
-      setFollowing(json.length);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  // 팔로워
-  const followerCount = async () => {
-    const followerPath = `/profile/${accountName}/follower`;
-
-    try {
-      const res = await fetch(url + followerPath, init);
-      const json = await res.json();
-      setFollower(json.length);
+      setFollowing(json.profile.followingCount);
+      setFollower(json.profile.followerCount);
     } catch (err) {
       console.error(err);
     }
@@ -88,6 +62,7 @@ function ProfileInfo(props) {
               pathname: "/followers",
               search: `?id=${accountName}`,
             }}
+            state={follower}
           >
             {follower}
           </Link>
@@ -100,6 +75,7 @@ function ProfileInfo(props) {
               pathname: "/followings",
               search: `?id=${accountName}`,
             }}
+            state={following}
           >
             {following}
           </Link>

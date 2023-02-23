@@ -8,17 +8,23 @@ export const Follow = styled.div`
   position: relative;
 `;
 
+export const FollowWrap = styled.div`
+  height: calc(100vh - 108px);
+  overflow: auto;
+`;
+
 export const FollowUser = styled.ul`
-  margin-top: 24px;
+  margin-top: 16px;
   li {
     margin: 0 auto;
   }
   li + li {
-    margin-top: 16px;
+    margin: 16px auto;
   }
 `;
 
 export const Tabmenu = styled.div`
   position: absolute;
   bottom: 0;
+  background-color: #fff;
 `;

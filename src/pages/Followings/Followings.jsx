@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import TabMenu from "../../components/TabMenu/TabMenu";
 import { CommonNav } from "../../components/Navbar/Navbar";
 import { UserFollow } from "../../components/User/User";
-import { Follow, FollowUser, Tabmenu } from "../Followers/followers.style";
+import { Follow, FollowWrap, FollowUser, Tabmenu } from "../Followers/followers.style";
 
 export const Followings = () => {
   const location = useLocation();
@@ -17,6 +17,7 @@ export const Followings = () => {
   const followingList = async () => {
     const url = "https://mandarin.api.weniv.co.kr";
     const accountName = location.search.split("=")[1];
+    const followingCount = location.state;
     const token = localStorage.getItem("token");
 
     const init = {
@@ -29,7 +30,7 @@ export const Followings = () => {
 
     try {
       const resUserFollowing = await fetch(
-        `${url}/profile/${accountName}/following`,
+        `${url}/profile/${accountName}/following?limit=${followingCount}`,
         init
       );
       const resUserFollowingJson = await resUserFollowing.json();
@@ -42,19 +43,21 @@ export const Followings = () => {
   return (
     <Follow>
       <CommonNav title="Followings" />
-      <FollowUser>
-        {followings.map((item, index) => {
-          return (
-            <UserFollow
-              key={index}
-              picture={item.image}
-              name={item.username}
-              id={item.accountname}
-              button={item.isfollow}
-            />
-          );
-        })}
-      </FollowUser>
+      <FollowWrap>
+        <FollowUser>
+            {followings.map((item, index) => {
+            return (
+                <UserFollow
+                key={index}
+                picture={item.image}
+                name={item.username}
+                id={item.accountname}
+                button={item.isfollow}
+                />
+            );
+            })}
+        </FollowUser>
+      </FollowWrap>
       <Tabmenu>
         <TabMenu />
       </Tabmenu>

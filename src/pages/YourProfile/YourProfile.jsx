@@ -76,8 +76,38 @@ function MyProfile() {
   };
 
   // 팔로우 or 언팔로우
-  const handleClick = () => {
-    setIsFollow((isFollow) => !isFollow);
+  const handleClick = async () => {
+    if (isFollow === true) {
+        const init = {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-type": "application/json",
+            },
+        };
+
+        try {
+            await fetch(`${url}/profile/${accountName}/follow`, init);
+            setIsFollow((isFollow) => !isFollow);
+        } catch (err) {
+            console.error("err", err);
+        }
+    } else {
+        const init = {
+            method: "DELETE",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-type": "application/json",
+            },
+        };
+
+        try {
+            await fetch(`${url}/profile/${accountName}/unfollow`, init);
+            setIsFollow((isFollow) => !isFollow);
+        } catch (err) {
+            console.error("err", err);
+        }
+    }
   };
 
   // 유저 데이터에 등록한 상품이 있는지 체크
@@ -132,7 +162,7 @@ function MyProfile() {
         />
       </nav>
       <ProfileMain>
-        <ProfileInfo accountName={accountName} />
+        <ProfileInfo accountName={accountName} isFollow={isFollow} />
         <ProfileButtonWrapper>
           <Circle message />
           <Button

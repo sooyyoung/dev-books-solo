@@ -34,6 +34,9 @@ export const UserFollow = (props) => {
   const [isFollow, setIsFollow] = useState(button);
   let navigate = useNavigate();
 
+  const url = "https://mandarin.api.weniv.co.kr";
+  const token = localStorage.getItem("token");
+
   // 유저 클릭 시 해당 유저의 프로필 페이지로 이동
   const moveUserProfile = () => {
     if (id === myAccountName) {
@@ -43,8 +46,39 @@ export const UserFollow = (props) => {
     }
   };
 
-  const handleClick = () => {
-    setIsFollow((isFollow) => !isFollow);
+  // 팔로우 or 언팔로우
+  const handleClick = async () => {
+    if (isFollow === false) {
+        const init = {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-type": "application/json",
+            },
+        };
+        
+        try {
+            await fetch(`${url}/profile/${id}/follow`, init);
+            setIsFollow((isFollow) => !isFollow);
+        } catch (err) {
+            console.error("err", err);
+        }
+    } else {
+        const init = {
+            method: "DELETE",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-type": "application/json",
+            },
+        };
+
+        try {
+            await fetch(`${url}/profile/${id}/unfollow`, init);
+            setIsFollow((isFollow) => !isFollow);
+        } catch (err) {
+            console.error("err", err);
+        }
+    }
   };
 
   return (
