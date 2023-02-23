@@ -44,11 +44,16 @@ export const BasicNav = (props) => {
   );
 };
 
-export const SearchNav = () => {
+export const SearchNav = (props) => {
   return (
     <Nav>
       <ArrowButton />
-      <SearchInput type="text" placeholder="계정 검색" />
+      <SearchInput 
+        type="text" 
+        placeholder="계정 검색" 
+        value={props.keyword}
+        onChange={(e) => props.setKeyword(e.target.value)}
+      />
     </Nav>
   );
 };

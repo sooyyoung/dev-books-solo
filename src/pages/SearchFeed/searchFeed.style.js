@@ -8,15 +8,16 @@ export const SearchFeedSection = styled.section`
 `;
 
 export const SearchFeedMain = styled.main`
-  height: auto;
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
 `;
 
 export const SearchList = styled.ul`
-  margin-top: 20px;
+  margin: 20px 0;
 
   > li {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 
   > li + li {
