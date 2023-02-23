@@ -39,6 +39,7 @@ function Album(props) {
             key={index}
             src={item.image.split(",")[0]}
             alt=""
+            className={item.image == "" ? "hidden" : ""}
             onClick={() => {
               navigate("/singlePost", {
                 state: {

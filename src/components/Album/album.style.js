@@ -12,4 +12,7 @@ export const PostWrapper = styled.div`
     object-fit: cover;
     cursor: pointer;
   }
+  .hidden {
+    display: none;
+  }
 `;
