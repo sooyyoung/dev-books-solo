@@ -6,22 +6,22 @@ export default function TabMenu() {
     <>
       <Wrapper>
         <Menu>
-          <NavStyle to="/HomeFeed" homefeed>
+          <NavStyle to="/HomeFeed" homefeed={"homefeed"}>
             홈
           </NavStyle>
         </Menu>
         <Menu>
-          <NavStyle to="/chatFeed" chatFeed>
+          <NavStyle to="/chatFeed" chatfeed={"chatfeed"}>
             채팅
           </NavStyle>
         </Menu>
         <Menu>
-          <NavStyle to="/PostUpload" postUpload>
+          <NavStyle to="/PostUpload" postupload={"postupload"}>
             게시물 작성
           </NavStyle>
         </Menu>
         <Menu>
-          <NavStyle to="/myProfile" myProfile>
+          <NavStyle to="/myProfile" myprofile={"myprofile"}>
             프로필
           </NavStyle>
         </Menu>

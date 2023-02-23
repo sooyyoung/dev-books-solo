@@ -39,13 +39,13 @@ export const NavStyle = styled(NavLink)`
     if (props.homefeed) {
       return `url(${homeFeedImg})`;
     }
-    if (props.chatFeed) {
+    if (props.chatfeed) {
       return `url(${chatFeedImg})`;
     }
-    if (props.postUpload) {
+    if (props.postupload) {
       return `url(${postUploadImg})`;
     }
-    if (props.myProfile) {
+    if (props.myprofile) {
       return `url(${myProfileImg})`;
     }
   }};

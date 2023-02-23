@@ -10,7 +10,7 @@ import {
 
 const SearchFeed = () => {
   let navigate = useNavigate();
-  const [keyword, setKeyword] = useState();
+  const [keyword, setKeyword] = useState("");
   const [searchResult, setSearchResult] = useState([]);
 
   const url = "https://mandarin.api.weniv.co.kr";
@@ -47,13 +47,14 @@ const SearchFeed = () => {
       <SearchNav keyword={keyword} setKeyword={setKeyword} />
       <SearchFeedMain>
         <SearchList>
-            {searchResult.map ? searchResult.map((k) => {
+            {searchResult.map ? searchResult.map((item, index) => {
                 return (
                     <UserSearch
-                        click={() => {navigate(`/yourProfile?id=${k.accountname}`)}}
-                        picture={k.image}
-                        name={k.username}
-                        id={k.accountname}
+                        key={index}
+                        click={() => {navigate(`/yourProfile?id=${item.accountname}`)}}
+                        picture={item.image}
+                        name={item.username}
+                        id={item.accountname}
                     />
                 )
             }) : ""
