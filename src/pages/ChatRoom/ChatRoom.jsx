@@ -34,7 +34,7 @@ export default function ChatRoom() {
   return (
     <ChatRoomWrap>
       <ChatNav
-        title="애월읍 위니브 감귤농장"
+        title="우당탕탕 코딩 꿈나무"
         onClickBtn={() => {
           setModal(true);
         }}
@@ -44,24 +44,18 @@ export default function ChatRoom() {
           <ChatList>
             <UserChatImg src={userProfile} />
             <UserChatMsg>
-              옷을 인생을 그러므로 없으면 것은 이상은 것은 우리의 위하여,
-              뿐이다. 이상의 청춘의 뼈 따뜻한 그들의 그와 약동하다. 대고, 못할
-              넣는 풍부하게 뛰노는 인생의 힘있다.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quod eos iusto hic ducimus rem. Culpa facilis corporis voluptatum tenetur recusandae iusto optio et?
             </UserChatMsg>
             <ChatTime>12:39</ChatTime>
           </ChatList>
           <ChatList>
             <UserChatImg src={userProfile} />
-            <UserChatMsg>안녕하세요. 감귤 사고싶어요요요요요</UserChatMsg>
+            <UserChatMsg>안녕하세요. 책 사고싶어요요요요요~^^</UserChatMsg>
             <ChatTime>12:41</ChatTime>
           </ChatList>
           <ChatList myChat>
             <ChatTime>12:50</ChatTime>
             <MyChatMsg>네 말씀하세요.</MyChatMsg>
-          </ChatList>
-          <ChatList myChat>
-            <ChatTime>12:51</ChatTime>
-            <MyChatMsg chatImg></MyChatMsg>
           </ChatList>
         </ul>
       </ChatMain>

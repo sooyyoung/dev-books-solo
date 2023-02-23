@@ -44,21 +44,21 @@ const ChatFeed = () => {
         <ChatFeedList>
           <UserChatList
             picture={BasicProfile}
-            name={"애월읍 위니브 감귤농장"}
-            chat={"이번에 정정 언제하맨마씸?"}
+            name={"우당탕탕 코딩 꿈나무"}
+            chat={"안녕하세요. 책 사고싶어요요요요요~^^"}
             onClick={() => {
               navigate("/chatRoom");
             }}
           />
           <UserChatList
             picture={BasicProfile}
-            name={"제주감귤마을"}
-            chat={"깊은 어둠의 존재감, 롤스로이스 뉴 블랙 배지..."}
+            name={"제주코딩"}
+            chat={"(광고) hello world !!! ..."}
           />
           <UserChatList
             picture={BasicProfile}
-            name={"누구네 농장 친환경 한라봉"}
-            chat={"내 차는 내가 평가한다. 오픈 이벤트에 참여 하..."}
+            name={"개발짱이될거야"}
+            chat={"안녕하세염 책 팔렸나요? ..."}
           />
         </ChatFeedList>
         <TabMenuHome>

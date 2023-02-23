@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import myChatImg from "../../assets/chat-exapmle.png";
 import imgBtn from "../../assets/img-button.svg";
 
 export const ChatRoomWrap = styled.div`
@@ -70,16 +69,6 @@ export const MyChatMsg = styled.div`
   font-size: 14px;
   line-height: 18px;
   margin-left: 6px;
-
-  ${(props) => {
-    if (props.chatImg) {
-      return `
-        background: url(${myChatImg});
-        width: 240px;
-        height: 240px;
-      `;
-    }
-  }}
 `;
 
 export const ChatInputWrap = styled.section`
