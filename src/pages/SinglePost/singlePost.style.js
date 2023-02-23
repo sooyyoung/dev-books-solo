@@ -9,8 +9,9 @@ export const SinglePostWrap = styled.div`
 `;
 
 export const SinglePostMain = styled.section`
-  height: 711px;
-  overflow-y: auto;
+  height: calc(100vh - 108px);
+  overflow: auto;
+  overflow-x: hidden;
 `;
 
 export const SinglePostContainer = styled.section`
