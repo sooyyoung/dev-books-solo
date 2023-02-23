@@ -18,7 +18,7 @@ export const HomeTabmenu = styled.div`
 `;
 
 export const HomeFeedDataMain = styled.main`
-  height: 86vh;
+  height: calc(100vh - 108px);
   overflow-y: scroll;
   &::-webkit-scrollbar {
     display: none;

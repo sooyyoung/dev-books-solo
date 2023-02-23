@@ -12,7 +12,7 @@ export const ChatRoomWrap = styled.div`
 `;
 
 export const ChatMain = styled.section`
-  height: 86vh;
+  height: calc(100vh - 108px);
   background-color: #f8f8f8;
   padding: 11px 16px;
 `;
