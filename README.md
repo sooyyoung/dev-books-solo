@@ -16,7 +16,7 @@
 - Front: React
 - Back: 제공된 REST API 사용
 - Design: [Figma](https://www.figma.com/file/maNC6XnmZaSJ8Ep2y0EtDj/Dev-Books?node-id=0%3A1)
-- 배포 URL: 
+- 배포 URL: [dev-books.app](https://devbooks-sns.netlify.app/)
 - 계정 <br>
   `ID`: devbooks@mail.com
   <br> 
@@ -35,6 +35,12 @@
     - 기존 프로필 정보가 입력되어 있도록 구현
 - 팔로워, 팔로잉 목록
     - 팔로우 상태에 따라 버튼 변화
+
+`v1.1`
+- 유저 검색
+    - 텍스트를 입력하면 해당되는 사용자 이름, 계정 표시
+- 유저 팔로우, 언팔로우
+    - 버튼만 변화 → 기능 추가
 
 <br>
 
