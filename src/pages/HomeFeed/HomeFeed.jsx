@@ -16,6 +16,11 @@ import {
 const HomeFeed = () => {
   // 팔로워 게시글 목록 개수 상태
   const [followerPost, setFollowerPost] = useState([]);
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    getFollowerPost();
+  }, []);
 
   // 팔로워 게시글 목록 불러오기
   const getFollowerPost = async () => {
@@ -36,13 +41,8 @@ const HomeFeed = () => {
       setFollowerPost(json.posts);
     } catch (error) {}
   };
-  useEffect(() => {
-    getFollowerPost();
-  }, []);
-
-  let navigate = useNavigate();
-
-  return followerPost.length > 0 ? (
+  
+  return followerPost ? (
     <HomeFeedSection isvalid={followerPost.length}>
       <HomeTabmenu>
         <TabMenu />
@@ -70,7 +70,7 @@ const HomeFeed = () => {
       </HomeFeedDataMain>
     </HomeFeedSection>
   ) : (
-    <HomeFeedSection isvalid={followerPost.length}>
+    <HomeFeedSection>
       <HomeTabmenu>
         <TabMenu />
       </HomeTabmenu>
