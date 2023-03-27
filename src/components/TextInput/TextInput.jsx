@@ -7,7 +7,7 @@ import {
 
 export const TextInput = (props) => {
   return (
-    <TextInputContainer>
+    <TextInputContainer >
       <InputLabel htmlFor={props.for}>{props.label}</InputLabel>
       <InputText
         id={props.id}
@@ -16,6 +16,7 @@ export const TextInput = (props) => {
         onChange={props.onChange}
         onBlur={props.onBlur}
         value={props.value}
+        autoComplete="off"
       />
     </TextInputContainer>
   );
