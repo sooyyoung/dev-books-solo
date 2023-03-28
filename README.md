@@ -1,5 +1,5 @@
 # 📚 데브북스 리팩토링
-![182052011-0678ee06-f49a-4888-92d6-d76d95a7b644](https://user-images.githubusercontent.com/103087604/220595230-fe980e3e-1fdf-4742-86eb-e28083e6d47f.png)
+![182052011-0678ee06-f49a-4888-92d6-d76d95a7b644](https://user-images.githubusercontent.com/103087604/228109923-928a03fa-8562-4d8b-940a-6dadac9b2832.png)
 
 **데브북스(dev-books)는 IT 개발자들을 위한 중고책 거래 마켓입니다.** <br>
 자신의 스토어에 판매하고 있는 상품을 등록하여 홍보할 수 있는 SNS입니다. <br>
@@ -14,11 +14,10 @@
 
 ## ⚙️ 개발 환경 및 배포 URL
 - Front: React
-- Back: 제공된 REST API 사용
+- Back: 제공된 REST API
 - Design: [Figma](https://www.figma.com/file/maNC6XnmZaSJ8Ep2y0EtDj/Dev-Books?node-id=0%3A1)
 - 배포 URL: [dev-books.app](https://devbooks-sns.netlify.app/)
-- 계정 <br>
-  `ID`: devbooks@mail.com
+- `ID`: devbooks@mail.com
   <br> 
   `Password`: devbooks
 
@@ -28,7 +27,9 @@
 ### 👩🏻‍💻 조수영
 
 `v1.0`
-- 프로필 페이지
+- 회원가입, 로그인 
+    - 유효성 검사
+- 유저 프로필 
     - 유저 정보, 판매중인 상품, 게시글 표시
     - 게시글을 목록형, 앨범형으로 선택하여 보기
 - 프로필 수정
@@ -40,7 +41,7 @@
 - 유저 검색
     - 텍스트를 입력하면 해당되는 사용자 이름, 계정 표시
 - 유저 팔로우, 언팔로우
-    - 버튼만 변화 → 기능 추가
+    - 버튼만 변화(v1.0) → 기능 추가
 
 <br>
 
